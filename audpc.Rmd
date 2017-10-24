@@ -26,7 +26,8 @@ Os dados foram planilhados no formato "longo" no arquivo `data_audpc.xlsx`. Ao c
 ```{r message=FALSE, warning=FALSE, paged.print=TRUE}
 library(readxl)
 data1 <- read_excel("data_audpc.xlsx")
-data1
+library(knitr)
+kable(data1)
 ```
 
 
@@ -50,7 +51,7 @@ audpc1 <- data1 %>%
 # renomeia a últuma coluna para audpc
 names(audpc1)[4] <- "audpc"
 
-audpc1
+kable(audpc1)
 
 ```
 
